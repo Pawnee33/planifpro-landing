@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlanifPro, le planning des cours de musique généré pour vous</title>
+  <meta name="description" content="PlanifPro automatise la génération de planning pédagogique pour les professeurs de musique et leurs élèves." />
+  <link rel="icon" href="images/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-[#1B1B23] text-white antialiased">
 
+  <!-- En-tête : navigation + bouton vers l'application (task 0) -->
+  <header class="fixed top-0 z-50 w-full border-b border-white/10 bg-[#1B1B23]/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#accueil" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Logo PlanifPro" class="h-9 w-9" />
+        <span class="text-lg font-semibold tracking-wide">PlanifPro</span>
+      </a>
+      <ul class="hidden gap-8 md:flex">
+        <li><a href="#fonctionnalites" class="text-sm text-white/70 transition hover:text-[#D59813]">Fonctionnalités</a></li>
+        <li><a href="#demo" class="text-sm text-white/70 transition hover:text-[#D59813]">Démo</a></li>
+        <li><a href="#a-propos" class="text-sm text-white/70 transition hover:text-[#D59813]">À propos</a></li>
+      </ul>
+      <a href="https://planif-pro.vercel.app" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-[#D59813] px-5 py-2 text-sm font-semibold text-[#1B1B23] transition hover:bg-[#e8ab27]">Lancer l'application</a>
+    </nav>
+  </header>
+
+  <!-- Section d'introduction (task 0) -->
+  <section id="accueil" class="relative flex min-h-screen items-center justify-center overflow-hidden pt-20">
+    <img src="images/hero.png" alt="Professeur de musique organisant son planning de cours" class="absolute inset-0 h-full w-full object-cover opacity-30" />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#1B1B23]/60 via-[#1B1B23]/80 to-[#1B1B23]"></div>
+    <div class="relative mx-auto max-w-3xl px-6 text-center">
+      <h1 class="text-5xl font-bold md:text-7xl">Planif<span class="text-[#D59813]">Pro</span></h1>
+      <p class="mt-6 text-xl text-white/80 md:text-2xl">Le planning des cours de musique, généré pour vous.</p>
+      <p class="mx-auto mt-4 max-w-xl text-white/60">PlanifPro collecte les disponibilités de vos élèves et construit automatiquement un planning sans conflit, synchronisé avec votre agenda.</p>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="https://planif-pro.vercel.app" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-[#D59813] px-8 py-3 font-semibold text-[#1B1B23] transition hover:bg-[#e8ab27]">Accéder à l'application</a>
+        <a href="#fonctionnalites" class="rounded-lg border border-white/30 px-8 py-3 font-semibold transition hover:border-[#D59813] hover:text-[#D59813]">Découvrir les fonctionnalités</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section fonctionnalités (task 1) -->
+  <section id="fonctionnalites" class="mx-auto max-w-6xl px-6 py-24">
+    <h2 class="text-center text-4xl font-bold">Fonctionnalités clés</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-center text-white/60">Trois piliers pensés pour faire gagner du temps aux professeurs et simplifier la vie des élèves.</p>
+
+    <div class="mt-16 space-y-24">
+
+      <article class="flex flex-col items-center gap-10 md:flex-row md:gap-16">
+        <div class="w-full md:w-1/2">
+          <img src="images/planning.png" alt="Planning généré automatiquement dans PlanifPro" class="w-full rounded-xl border border-white/10 shadow-2xl" />
+        </div>
+        <div class="w-full md:w-1/2">
+          <span class="text-sm font-semibold text-[#D59813]">01</span>
+          <h3 class="mt-2 text-2xl font-semibold">Génération automatique du planning</h3>
+          <p class="mt-4 leading-relaxed text-white/70">À partir des vœux des élèves et des contraintes du professeur, PlanifPro propose trois plannings possibles en quelques secondes. Le professeur choisit, ajuste et valide.</p>
+        </div>
+      </article>
+
+      <article class="flex flex-col items-center gap-10 md:flex-row-reverse md:gap-16">
+        <div class="w-full md:w-1/2">
+          <img src="images/voeux.png" alt="Formulaire de vœux d'un élève" class="w-full rounded-xl border border-white/10 shadow-2xl" />
+        </div>
+        <div class="w-full md:w-1/2">
+          <span class="text-sm font-semibold text-[#D59813]">02</span>
+          <h3 class="mt-2 text-2xl font-semibold">Formulaire de vœux pour les élèves</h3>
+          <p class="mt-4 leading-relaxed text-white/70">Chaque élève dépose ses disponibilités depuis son espace. Le professeur suit en temps réel qui a répondu et relance les retardataires en un clic.</p>
+        </div>
+      </article>
+
+      <article class="flex flex-col items-center gap-10 md:flex-row md:gap-16">
+        <div class="w-full md:w-1/2">
+          <img src="images/google.png" alt="Synchronisation avec Google Calendar" class="w-full rounded-xl border border-white/10 shadow-2xl" />
+        </div>
+        <div class="w-full md:w-1/2">
+          <span class="text-sm font-semibold text-[#D59813]">03</span>
+          <h3 class="mt-2 text-2xl font-semibold">Synchronisation Google Calendar</h3>
+          <p class="mt-4 leading-relaxed text-white/70">Les cours et les événements se synchronisent avec Google Calendar. Le professeur importe aussi ses indisponibilités personnelles pour éviter tout conflit.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Section démo -->
+  <section id="demo" class="border-t border-white/10 bg-black/20 py-24">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-4xl font-bold">Voir PlanifPro en action</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/60">Une démonstration complète du parcours professeur et du parcours élève.</p>
+      <div class="mt-10 aspect-video w-full overflow-hidden rounded-xl border border-white/10">
+        <iframe class="h-full w-full" src="https://www.youtube.com/embed/ID_DE_TA_VIDEO" title="Démonstration de PlanifPro" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section à propos (task 2) -->
+  <section id="a-propos" class="py-24">
+    <div class="mx-auto max-w-3xl px-6">
+      <h2 class="text-4xl font-bold">À propos du projet</h2>
+
+      <div class="mt-8 space-y-5 leading-relaxed text-white/70">
+        <p>L'idée de PlanifPro ne vient pas de moi, elle vient d'une professeure de piano. Chaque rentrée, elle passait par la même épreuve : une réunion avec tous les parents pour répartir les créneaux de la semaine. Plusieurs familles voulaient le même horaire, les enfants avaient déjà du sport ou du soutien scolaire ailleurs, et la salle n'était disponible que certains jours. La réunion durait des heures, se terminait souvent en tension, et il fallait tout recommencer au moindre changement.</p>
+        <p>Quand elle m'a raconté ça, j'ai cherché l'outil qui réglait le problème. Il n'existait pas. Les agendas partagés collectent des disponibilités, mais aucun ne répartit équitablement des créneaux sous contraintes. J'ai donc construit celui qui manquait : les élèves déposent leurs vœux, l'algorithme génère trois plannings en tenant compte de la durée propre à chaque élève, et le professeur garde le dernier mot. Le vrai défi n'était pas l'interface, c'était l'algorithme de répartition et la modélisation des données.</p>
+        <p>PlanifPro a été développé en solo sur cinq sprints, entre mai et juillet 2026, dans le cadre du projet portfolio de <a href="https://www.holbertonschool.fr/" target="_blank" rel="noopener noreferrer" class="text-[#D59813] underline underline-offset-4">Holberton School</a>.</p>
+      </div>
+
+      <div class="mt-12 rounded-xl border border-white/10 bg-white/5 p-6">
+        <h3 class="text-xl font-semibold">L'équipe</h3>
+        <div class="mt-4">
+          <p class="font-medium">Pawnee Defize</p>
+          <p class="text-sm text-white/60">Développeuse full stack, conception et réalisation complète</p>
+          <div class="mt-3 flex flex-wrap gap-4 text-sm">
+            <a href="https://www.linkedin.com/in/pawnee-defize/" target="_blank" rel="noopener noreferrer" class="text-[#D59813] hover:underline">LinkedIn</a>
+            <a href="https://github.com/Pawnee33" target="_blank" rel="noopener noreferrer" class="text-[#D59813] hover:underline">GitHub</a>
+            <a href="https://x.com/TON_COMPTE" target="_blank" rel="noopener noreferrer" class="text-[#D59813] hover:underline">Twitter</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://github.com/Pawnee33/PlanifPro" target="_blank" rel="noopener noreferrer" class="mt-8 inline-block rounded-lg border border-white/30 px-6 py-3 font-semibold transition hover:border-[#D59813] hover:text-[#D59813]">Voir le dépôt GitHub du projet</a>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-8">
+    <div class="mx-auto max-w-6xl px-6 text-center text-sm text-white/50">
+      <p>PlanifPro 2026, projet portfolio Holberton School</p>
+    </div>
+  </footer>
+
+</body>
+</html>
